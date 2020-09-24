@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Elements</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #eee;
+      }
+
+      input {
+        padding: 10px;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px #333;
+      }
+
+      button {
+        padding: 10px;
+        background-color: #333;
+        color: #eee;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        box-shadow: 2px 2px 2px #333;
+      }
+
+      button:hover {
+        background-color: rgb(99, 98, 98);
+      }
+    </style>
+  </head>
+  <body>
+      <h2>Tag generator</h2>
+      <p>Introduces the element you want to create and its text</p>
+    <input type="text" id="element" placeholder="Element" />
+    <input type="text" id="textNode" placeholder="Text" />
+    <button type="button" id="btn-create">Create Element</button>
+    <script src="index.js"></script>
+  </body>
+</html>
