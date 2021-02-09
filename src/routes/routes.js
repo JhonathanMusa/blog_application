@@ -7,7 +7,7 @@ import {
   getCommentsByUser,
   addComment,
   updateComment,
-  deleteComments,
+  deleteComment,
 } from "../controllers/index.controllers";
 const router = Router();
 
@@ -22,6 +22,6 @@ router.get("/comment/:id", getCommentById);
 router.get("/comments/:name", getCommentsByUser);
 router.post("/add-comment", addComment);
 router.put("/comment/:id", updateComment);
-router.delete("/comments/:id", deleteComments);
+router.delete("/comment/:id", deleteComment);
 
 module.exports = router;

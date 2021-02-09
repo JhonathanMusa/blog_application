@@ -61,7 +61,7 @@ const updateComment = async (req, res) => {
 };
 
 // DELETE METHOD: delete an specific comment by id
-const deleteComments = async (req, res) => {
+const deleteComment = async (req, res) => {
   const _id = req.params.id;
   const response = await pool.query("DELETE FROM users WHERE id = $1", [_id]);
   console.log(response);
@@ -74,5 +74,5 @@ module.exports = {
   getCommentsByUser,
   addComment,
   updateComment,
-  deleteComments,
+  deleteComment,
 };
