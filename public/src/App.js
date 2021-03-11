@@ -1,14 +1,12 @@
-import React, { Fragment } from "react";
-import Home from "./components/Home";
+import React from "react";
+import Nav from "./components/Nav";
 
-const App = () => {
+function App() {
   return (
-    <Fragment>
-      <div className="App">
-        <Home />
-      </div>
-    </Fragment>
+    <div>
+     <Nav />
+    </div>
   );
-};
+}
 
 export default App;

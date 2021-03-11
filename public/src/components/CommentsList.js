@@ -10,7 +10,7 @@ const Comment = (props) => (
   </tr>
 );
 
-export const CommentsList = () => {
+export default function CommentsList() {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
@@ -48,4 +48,4 @@ export const CommentsList = () => {
       </table>
     </div>
   );
-};
+}

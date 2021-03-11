@@ -1,14 +1,10 @@
-import React, { Fragment } from "react";
-import { Nav } from "./Nav";
-import { CommentsList } from "./CommentsList";
+import React from "react";
 
-const Home = () => {
+
+export default function Home() {
   return (
-    <Fragment>
-      <Nav />
-      <CommentsList />
-    </Fragment>
+    <div>
+      <h1>Welcome</h1>
+    </div>
   );
-};
-
-export default Home;
+}

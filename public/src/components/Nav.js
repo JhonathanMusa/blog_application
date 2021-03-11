@@ -1,23 +1,26 @@
-import React, { Fragment } from "react";
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Home from "./Home";
+import CommentsList from "./CommentsList";
 
-const url = "http://www.google.com";
-
-export const Nav = () => {
+export default function Nav() {
   return (
-    <Fragment>
-      <nav className="nav bg-dark">
-        <a className="nav-link active" aria-current="page" href={url}>
-          Home
-        </a>
-        <a className="nav-link" href={url}>
-          Comments List
-        </a>
-        <a className="nav-link" href={url}>
-          Add New Comment
-        </a>
-      </nav>
-    </Fragment>
+    <Router>
+      <div>
+        <nav className="nav bg-dark">
+          <Link className="nav-link active" aria-current="page" to="/">
+            Home
+          </Link>
+          <Link className="nav-link" to="/comments">
+            Comments List
+          </Link>
+          <Link className="nav-link" to="/">
+            Add New Comment
+          </Link>
+        </nav>
+      </div>
+      <Route path="/" component={Home} />
+      <Route path="/comments" component={CommentsList} />
+    </Router>
   );
-};
-
-
+}

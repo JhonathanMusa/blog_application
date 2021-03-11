@@ -1,4 +1,4 @@
-CREATE DATABASE blog_practice;
+CREATE DATABASE blog_mern;
 
 CREATE TABLE users 
 (
