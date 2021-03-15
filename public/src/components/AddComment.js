@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-export default function AddComment() {
+export default function AddComment(props) {
   const [newComment, setNewComment] = useState([]);
 
   const inputHandle = (e) => {
@@ -22,6 +22,8 @@ export default function AddComment() {
       .catch((error) => {
         console.log(error);
       });
+
+    props.history.push("/comments");
   };
 
   return (
