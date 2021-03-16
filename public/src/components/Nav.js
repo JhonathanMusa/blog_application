@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from "./Home";
 import CommentsList from "./CommentsList";
 import AddComment from "./AddComment";
+import DeleteComment from "./DeleteComment";
 
 export default function Nav() {
   return (
@@ -23,6 +24,7 @@ export default function Nav() {
       <Route path="/" exact component={Home} />
       <Route path="/comments" component={CommentsList} />
       <Route path="/new-comment" component={AddComment} />
+      <Route path="/delete/:id" component={DeleteComment} />
     </Router>
   );
 }

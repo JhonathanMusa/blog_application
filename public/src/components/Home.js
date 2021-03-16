@@ -8,7 +8,7 @@ export default function Home() {
       <div className="jumbotron jumbotron-fluid bg-white text-center">
         <div className="container">
           <h1 className="display-4">Blog Application</h1>
-          <p className="lead">You can see what your friends say about you</p>
+          <p className="lead">Here, You can see what your friends say</p>
 
           <div className="btn-jumbo">
             <div>

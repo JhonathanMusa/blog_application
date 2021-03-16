@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Comment = (props) => (
   <tr>
@@ -7,6 +8,11 @@ const Comment = (props) => (
     <td>{props.comment.email}</td>
     <td>{props.comment.text}</td>
     <td>{props.comment.create_at}</td>
+    <td>
+      <Link to={"/delete/" + props.comment.id}>
+        <button className="btn btn-danger">Delete</button>
+      </Link>
+    </td>
   </tr>
 );
 
@@ -42,6 +48,7 @@ export default function CommentsList() {
             <th>Email</th>
             <th>Text</th>
             <th>Create at</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>{comments()}</tbody>
