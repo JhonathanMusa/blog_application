@@ -4,6 +4,7 @@ import Home from "./Home";
 import CommentsList from "./CommentsList";
 import AddComment from "./AddComment";
 import DeleteComment from "./DeleteComment";
+import UpdateComment from "./UpdateComment";
 
 export default function Nav() {
   return (
@@ -25,6 +26,7 @@ export default function Nav() {
       <Route path="/comments" component={CommentsList} />
       <Route path="/new-comment" component={AddComment} />
       <Route path="/delete/:id" component={DeleteComment} />
+      <Route path="/update/:id" component={UpdateComment} />
     </Router>
   );
 }

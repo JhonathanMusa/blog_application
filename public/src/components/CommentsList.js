@@ -12,6 +12,9 @@ const Comment = (props) => (
       <Link to={"/delete/" + props.comment.id}>
         <button className="btn btn-danger">Delete</button>
       </Link>
+      <Link to={"/update/" + props.comment.id}>
+        <button className="btn btn-warning">Update</button>
+      </Link>
     </td>
   </tr>
 );
