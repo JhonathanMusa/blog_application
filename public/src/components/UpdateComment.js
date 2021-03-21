@@ -29,14 +29,19 @@ export default function UpdateComment(props) {
   const submithandle = (e) => {
     e.preventDefault();
 
-    axios
-      .post("http://localhost:8000/add-comment/", updateComment)
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((error) => {
+    const inserTdata = async () => {
+      try {
+        const { data } = await axios.post(
+          "http://localhost:8000/add-comment/",
+          updateComment
+        );
+        console.log(data);
+      } catch (error) {
         console.log(error);
-      });
+      }
+    };
+
+    inserTdata();
 
     props.history.push("/comments");
   };
@@ -51,7 +56,7 @@ export default function UpdateComment(props) {
             placeholder="Name"
             type="text"
             value={updateComment.name}
-            />
+          />
         </div>
         <div className="form-group">
           <input
@@ -61,7 +66,7 @@ export default function UpdateComment(props) {
             placeholder="Email"
             type="email"
             value={updateComment.email}
-            />
+          />
         </div>
         <div className="form-group">
           <textarea

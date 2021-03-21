@@ -33,14 +33,19 @@ export default function DeleteComment(props) {
   const submithandle = (e) => {
     e.preventDefault();
 
-    axios
-      .delete(`http://localhost:8000/comment/${id}`, deleteComment)
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((error) => {
+    const deleteData = async () => {
+      try {
+        const { data } = await axios.delete(
+          `http://localhost:8000/comment/${id}`,
+          deleteComment
+        );
+        console.log(data);
+      } catch (error) {
         console.log(error);
-      });
+      }
+    };
+
+    deleteData();
 
     props.history.push("/comments");
   };

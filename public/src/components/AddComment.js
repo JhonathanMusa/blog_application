@@ -14,15 +14,19 @@ export default function AddComment(props) {
   const submithandle = (e) => {
     e.preventDefault();
 
-    axios
-      .post("http://localhost:8000/add-comment/", newComment)
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((error) => {
+    const addComment = async () => {
+      try {
+        const { data } = await axios.post(
+          "http://localhost:8000/add-comment/",
+          newComment
+        );
+        console.log(data);
+      } catch (error) {
         console.log(error);
-      });
+      }
+    };
 
+    addComment();
     props.history.push("/comments");
   };
 
