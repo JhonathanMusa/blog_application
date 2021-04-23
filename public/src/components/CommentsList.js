@@ -7,7 +7,6 @@ const Comment = (props) => (
     <td>{props.comment.name}</td>
     <td>{props.comment.email}</td>
     <td>{props.comment.text}</td>
-    <td>{props.comment.create_at}</td>
     <td>
       <Link to={"/delete/" + props.comment.id}>
         <button className="btn btn-danger">Delete</button>
@@ -19,7 +18,7 @@ const Comment = (props) => (
   </tr>
 );
 
-export default function CommentsList() {
+export const CommentsList = () => {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
@@ -43,14 +42,13 @@ export default function CommentsList() {
   };
 
   return (
-    <div>
+    <div className="container">
       <table className="table text-center">
         <thead>
           <tr>
             <th>Name</th>
             <th>Email</th>
             <th>Text</th>
-            <th>Create at</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -58,4 +56,4 @@ export default function CommentsList() {
       </table>
     </div>
   );
-}
+};

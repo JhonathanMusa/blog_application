@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-export default function AddComment(props) {
+export const AddComment = (props) => {
   const [newComment, setNewComment] = useState([]);
 
   const inputHandle = (e) => {
@@ -60,9 +60,9 @@ export default function AddComment(props) {
           ></textarea>
         </div>
         <div>
-          <button className="btn btn-success btn-block">Send</button>
+          <button className="btn btn-primary btn-block">Send</button>
         </div>
       </form>
     </div>
   );
-}
+};

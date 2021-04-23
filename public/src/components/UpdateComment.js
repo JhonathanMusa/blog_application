@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-export default function UpdateComment(props) {
+export const UpdateComment = (props) => {
   const [updateComment, setUpdateComment] = useState([]);
 
   const { id } = props.match.params;
@@ -77,9 +77,9 @@ export default function UpdateComment(props) {
           ></textarea>
         </div>
         <div>
-          <button className="btn btn-success btn-block">Send</button>
+          <button className="btn btn-primary btn-block">Send</button>
         </div>
       </form>
     </div>
   );
-}
+};

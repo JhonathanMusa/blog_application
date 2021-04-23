@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Home from "./Home";
-import CommentsList from "./CommentsList";
-import AddComment from "./AddComment";
-import DeleteComment from "./DeleteComment";
-import UpdateComment from "./UpdateComment";
+import { Home } from "./Home";
+import { CommentsList } from "./CommentsList";
+import { AddComment } from "./AddComment";
+import { DeleteComment } from "./DeleteComment";
+import { UpdateComment } from "./UpdateComment";
 
-export default function Nav() {
+export const Nav = () => {
   return (
     <Router>
       <div>
@@ -29,4 +29,4 @@ export default function Nav() {
       <Route path="/update/:id" component={UpdateComment} />
     </Router>
   );
-}
+};

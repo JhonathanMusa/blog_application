@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-export default function DeleteComment(props) {
+export const DeleteComment = (props) => {
   const [deleteComment, setDeleteComment] = useState({
     name: "",
     email: "",

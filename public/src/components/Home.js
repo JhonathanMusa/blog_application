@@ -2,7 +2,7 @@ import React from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
 
-export default function Home() {
+export const Home = () => {
   return (
     <div>
       <div className="jumbotron jumbotron-fluid bg-white text-center">
