@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
+const URL = "http://localhost:8000/comment/";
+
 export const UpdateComment = (props) => {
   const [updateComment, setUpdateComment] = useState([]);
 
@@ -9,7 +11,7 @@ export const UpdateComment = (props) => {
   useEffect(() => {
     const getComment = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/comment/${id}`);
+        const response = await axios.get(URL + id);
         setUpdateComment(response.data);
         console.log(response.data);
       } catch (error) {

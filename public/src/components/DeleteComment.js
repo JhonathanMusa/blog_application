@@ -1,5 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
+
+const URL = "http://localhost:8000/comment/";
 
 export const DeleteComment = (props) => {
   const [deleteComment, setDeleteComment] = useState({
@@ -8,12 +11,12 @@ export const DeleteComment = (props) => {
     text: "",
   });
 
-  const { id } = props.match.params;
+  const { id } = useParams();
 
   useEffect(() => {
     const fetch = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/comment/${id}`);
+        const response = await axios.get(URL + id);
         setDeleteComment(response.data);
         console.log(response.data);
       } catch (error) {
@@ -35,10 +38,7 @@ export const DeleteComment = (props) => {
 
     const deleteData = async () => {
       try {
-        const { data } = await axios.delete(
-          `http://localhost:8000/comment/${id}`,
-          deleteComment
-        );
+        const { data } = await axios.delete(URL + id, deleteComment);
         console.log(data);
       } catch (error) {
         console.log(error);
@@ -87,4 +87,4 @@ export const DeleteComment = (props) => {
       </form>
     </div>
   );
-}
+};
