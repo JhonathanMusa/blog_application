@@ -1,16 +1,21 @@
-import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Home } from "./Home";
 import { CommentsList } from "./CommentsList";
 import { AddComment } from "./AddComment";
 import { DeleteComment } from "./DeleteComment";
 import { UpdateComment } from "./UpdateComment";
+import styles from "./Nav.module.css";
 
 export const Nav = () => {
   return (
     <Router>
       <div>
-        <nav className="nav bg-dark">
+        <header className={styles.row}>
+          <Link to="/" className={styles.brand}>
+            <div>Home Blog</div>
+          </Link>
+        </header>
+        <nav>
           <Link className="nav-link" aria-current="page" to="/">
             Home
           </Link>
