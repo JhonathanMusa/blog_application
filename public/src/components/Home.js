@@ -1,25 +1,26 @@
-import React from "react";
-import "../App.css";
 import { Link } from "react-router-dom";
+import styles from "./Nav.module.css";
 
 export const Home = () => {
   return (
     <div>
-      <h1 className="display-4">Blog Application</h1>
-      <p className="lead">Here, You can see what your friends say</p>
+      <h1>Blog Application</h1>
+      <p className={styles.paragraph}>
+        Here, You can see what your friends say
+      </p>
 
-      <div className="btn-jumbo">
+      <div className={styles.navButtons}>
         <div>
-          <button className="btn btn-dark">
-            <Link className="text-light" to="/comments">
+          <button className={styles.btnNavs}>
+            <Link className={styles.btnNavsLinks} to="/comments">
               See comments
             </Link>
           </button>
         </div>
 
         <div>
-          <button className="btn btn-dark">
-            <Link className="text-light" to="/new-comment">
+          <button className={styles.btnNavs}>
+            <Link className={styles.btnNavsLinks} to="/new-comment">
               Add new comments
             </Link>
           </button>

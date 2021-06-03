@@ -11,22 +11,18 @@ export const Nav = () => {
     <Router>
       <div>
         <header className={styles.row}>
-          <Link to="/" className={styles.brand}>
-            <div>Home Blog</div>
-          </Link>
-        </header>
-        <nav>
-          <Link className="nav-link" aria-current="page" to="/">
+          <Link className={styles.brand} aria-current="page" to="/">
             Home
           </Link>
-          <Link className="nav-link" to="/comments">
+          <Link className={styles.styleLinks} to="/comments">
             Comments List
           </Link>
-          <Link className="nav-link" to="/new-comment">
+          <Link className={styles.styleLinks} to="/new-comment">
             Add New Comment
           </Link>
-        </nav>
+        </header>
       </div>
+
       <Route path="/" exact component={Home} />
       <Route path="/comments" component={CommentsList} />
       <Route path="/new-comment" component={AddComment} />

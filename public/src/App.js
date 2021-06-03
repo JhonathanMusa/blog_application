@@ -1,13 +1,13 @@
 import React from "react";
 import { Nav } from "./components/Nav";
-import styles from "./components/Nav.module.css"
 
 const App = () => {
   return (
-    <div className={styles.gridContainer}>
+    <div className="grid-container">
       <Nav />
     </div>
   );
 }
 
 export default App;
+
