@@ -9,10 +9,10 @@ const Comment = (props) => (
     <td>{props.comment.text}</td>
     <td>
       <Link to={"/delete/" + props.comment.id}>
-        <button className="btn btn-danger">Delete</button>
+        <button className="btnListDelete btn-danger">Delete</button>
       </Link>
       <Link to={"/update/" + props.comment.id}>
-        <button className="btn btn-warning">Update</button>
+        <button className="btnListUpdate btn-warning">Update</button>
       </Link>
     </td>
   </tr>
@@ -44,7 +44,7 @@ export const CommentsList = () => {
   return (
     <div className="container">
       <table className="table text-center">
-        <thead>
+        <thead className="table-header">
           <tr>
             <th>Name</th>
             <th>Email</th>
