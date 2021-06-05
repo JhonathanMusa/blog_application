@@ -139,6 +139,41 @@ footer {
   width: 100%;
 }
 
-th, td {
+th,
+td {
   border-bottom: 1px solid #ddd;
+}
+
+/* ADD COMMENTS */
+.container-add-comments {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.form-input,
+.form-text-area {
+  width: 300px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid #eee;
+  padding: 10px;
+}
+
+.form-group {
+  padding-top: 10px;
+}
+
+.btnForm {
+  width: 320px;
+  height: 40px;
+  border: none;
+  background-color: #706f6f;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnForm:hover{
+  background-color: #4e4e4e;
 }

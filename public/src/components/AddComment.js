@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 
+const url = "http://localhost:8000/add-comment/";
+
 export const AddComment = (props) => {
   const [newComment, setNewComment] = useState([]);
 
@@ -16,10 +18,7 @@ export const AddComment = (props) => {
 
     const addComment = async () => {
       try {
-        const { data } = await axios.post(
-          "http://localhost:8000/add-comment/",
-          newComment
-        );
+        const { data } = await axios.post(url, newComment);
         console.log(data);
       } catch (error) {
         console.log(error);
@@ -31,11 +30,11 @@ export const AddComment = (props) => {
   };
 
   return (
-    <div className="container mt-3">
+    <div className="container-add-comments">
       <form onSubmit={submithandle}>
         <div className="form-group">
           <input
-            className="form-control"
+            className="form-input"
             name="name"
             onChange={inputHandle}
             placeholder="Name"
@@ -44,7 +43,7 @@ export const AddComment = (props) => {
         </div>
         <div className="form-group">
           <input
-            className="form-control"
+            className="form-input"
             name="email"
             onChange={inputHandle}
             placeholder="Email"
@@ -53,14 +52,14 @@ export const AddComment = (props) => {
         </div>
         <div className="form-group">
           <textarea
-            className="form-control"
+            className="form-text-area"
             name="text"
             onChange={inputHandle}
             placeholder="text"
           ></textarea>
         </div>
         <div>
-          <button className="btn btn-primary btn-block">Send</button>
+          <button className="btnForm">Send</button>
         </div>
       </form>
     </div>
