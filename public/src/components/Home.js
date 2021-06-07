@@ -8,19 +8,15 @@ export const Home = () => {
 
       <div className="navButtons">
         <div>
-          <button className="btnNavs">
-            <Link className="btnNavsLinks" to="/comments">
-              See comments
-            </Link>
-          </button>
+          <Link to="/comments">
+            <button className="btnNavs btnNavsLinks">See comments</button>
+          </Link>
         </div>
 
         <div>
-          <button className="btnNavs">
-            <Link className="btnNavsLinks" to="/new-comment">
-              Add new comments
-            </Link>
-          </button>
+          <Link to="/new-comment">
+            <button className="btnNavs btnNavsLinks">Add new comments</button>
+          </Link>
         </div>
       </div>
     </div>

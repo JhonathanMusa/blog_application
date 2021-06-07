@@ -27,7 +27,7 @@ h1 {
 
 header {
   grid-area: header;
-  background: #000;
+  background: rgb(65, 64, 64);
   opacity: 1;
 }
 
@@ -168,12 +168,12 @@ td {
   width: 320px;
   height: 40px;
   border: none;
-  background-color: #706f6f;
+  background: rgb(65, 64, 64);
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.btnForm:hover{
+.btnForm:hover {
   background-color: #4e4e4e;
 }
